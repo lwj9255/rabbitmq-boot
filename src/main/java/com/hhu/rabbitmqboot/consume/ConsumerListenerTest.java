@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 import java.io.IOException;
 
 @Component
-public class ConsumerTest {
+public class ConsumerListenerTest {
     @RabbitListener(queues = RabbitMQConfig.QUEUE)
     public void consume(String msg, Channel channel, Message message) throws IOException {
         System.out.println("队列的消息为："+msg);

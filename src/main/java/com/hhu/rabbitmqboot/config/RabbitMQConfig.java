@@ -21,7 +21,7 @@ public class RabbitMQConfig {
     }
 
     @Bean
-    public Binding bootBinding(Exchange exchange,Queue queue){
-        return BindingBuilder.bind(queue).to(exchange).with(ROUTING_KEY).noargs();
+    public Binding bootBinding(Exchange bootExchange,Queue bootQueue){
+        return BindingBuilder.bind(bootQueue).to(bootExchange).with(ROUTING_KEY).noargs();
     }
 }
